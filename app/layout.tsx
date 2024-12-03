@@ -38,7 +38,6 @@ export default function RootLayout({
           defaultTheme="system"
           disableTransitionOnChange
         >
-          <NavBar />
           {children}
         </ThemeProvider>
       </body>
