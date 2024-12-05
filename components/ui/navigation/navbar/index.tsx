@@ -2,12 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Theme } from "./Theme";
-import LogoutForm from "../../forms/LogoutForm";
-import { auth } from "@/auth";
+
 import MobileNavigation from "./MobileNavigation";
 
-export default async function NavBar() {
-  const session = await auth();
+export default function NavBar() {
   return (
     <nav className="flex-between background-light900_dark200 fixed z-50 w-full p-6 dark:shadow-none px-12 shadow-light-300 gap-5">
       <Link href={"/"} className="flex items-center gap-1">
@@ -25,7 +23,6 @@ export default async function NavBar() {
       <div className="flex-between gap-5">
         <Theme />
         <MobileNavigation />
-        {session && <LogoutForm />}
       </div>
     </nav>
   );

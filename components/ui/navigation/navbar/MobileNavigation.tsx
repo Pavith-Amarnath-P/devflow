@@ -23,7 +23,7 @@ export default function MobileNavigation() {
           alt="Menu"
           width={36}
           height={36}
-          className="invert-colors"
+          className="invert-colors sm:hidden"
         />
       </SheetTrigger>
       <SheetContent side={"left"}>
@@ -51,12 +51,12 @@ export default function MobileNavigation() {
           <div className="flex flex-col gap-3">
             <SheetClose asChild>
               <Link href={ROUTES.SIGN_IN}>
-                <Button className={`${buttonClass} btn-secondary`}>
+                <Button className={`${buttonClass} btn-secondary`} asChild>
                   <span className="primary-text-gradient">Log In</span>
                 </Button>
               </Link>
             </SheetClose>
-            <SheetClose>
+            <SheetClose asChild>
               <Link href={ROUTES.SIGN_UP}>
                 <Button
                   className={`${buttonClass} btn-tertiary light-border-2 text-dark400_light900`}
